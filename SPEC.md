@@ -49,7 +49,7 @@ Ninguno. Next.js en modo static export (`output: 'export'`). No hay API routes. 
 
 ## 6. Stack
 
-- **Framework:** Next.js 15 (App Router, `output: 'export'` para static hosting)
+- **Framework:** Next.js 15 (App Router, SSG nativo en Vercel — sin `output: 'export'`)
 - **Lenguaje:** TypeScript
 - **Estilos:** Tailwind CSS v4
 - **Animaciones:** Framer Motion
@@ -74,7 +74,7 @@ Ninguno. Next.js en modo static export (`output: 'export'`). No hay API routes. 
 ## 8. Riesgos conocidos
 
 - **i18n sin librería:** solución propia es más simple pero menos robusta ante plurales o interpolaciones complejas. Aceptable para la escala de este sitio.
-- **Static export + Vercel:** `output: 'export'` en Next.js deshabilita ISR, server actions y middleware. Aceptable: el sitio no los necesita.
+- **SSG nativo en Vercel:** Next.js sin `output: 'export'` permite agregar funcionalidades server-side en el futuro (formulario de contacto, analytics SSR) sin cambiar la infra.
 - **Foto de alta resolución:** si el usuario sube una imagen demasiado grande sin optimizar, el LCP puede sufrir. Mitigar con `next/image` y tamaño controlado.
 - **Framer Motion bundle size:** en sitios estáticos simples puede ser overhead. Evaluar si las animaciones justifican el peso; alternativa ligera es CSS transitions puras.
 
