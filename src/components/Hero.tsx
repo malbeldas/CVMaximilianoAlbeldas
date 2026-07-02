@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { useState } from 'react'
 import { useLanguage } from '@/context/LanguageContext'
 
@@ -134,18 +133,16 @@ export default function Hero() {
               {/* Photo container */}
               <div className="relative glass-strong rounded-2xl overflow-hidden w-full h-full gradient-border-card">
                 {!photoError ? (
-                  <Image
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
                     src="/photo.jpg"
                     alt="Maximiliano Albeldas"
-                    fill
-                    className="object-cover"
+                    className="w-full h-full object-cover object-top"
                     onError={() => setPhotoError(true)}
-                    priority
                   />
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-indigo-900/50 via-violet-900/30 to-slate-900/50 gap-2">
                     <span className="text-6xl font-extrabold gradient-text">MA</span>
-                    <span className="text-xs text-slate-600 font-mono">add /public/photo.jpg</span>
                   </div>
                 )}
               </div>
