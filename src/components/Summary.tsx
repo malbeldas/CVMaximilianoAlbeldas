@@ -27,8 +27,12 @@ export default function Summary() {
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className="glass rounded-2xl p-7 h-full">
-              <p className="text-slate-300 leading-relaxed text-base">{t.summary.text}</p>
+            <div className="glass rounded-2xl p-7 h-full space-y-4">
+              {t.summary.paragraphs.map((paragraph, i) => (
+                <p key={i} className="text-slate-300 leading-relaxed text-base">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </motion.div>
 

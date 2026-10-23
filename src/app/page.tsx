@@ -5,7 +5,8 @@ import Summary from '@/components/Summary'
 import Experience from '@/components/Experience'
 import Projects from '@/components/Projects'
 import Stack from '@/components/Stack'
-import Initiatives from '@/components/Initiatives'
+import Achievements from '@/components/Achievements'
+import Approach from '@/components/Approach'
 import Education from '@/components/Education'
 import Footer from '@/components/Footer'
 
@@ -16,10 +17,11 @@ export default function Page() {
       <main>
         <Hero />
         <Summary />
+        <Achievements />
         <Experience />
         <Projects />
         <Stack />
-        <Initiatives />
+        <Approach />
         <Education />
       </main>
       <Footer />

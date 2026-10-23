@@ -16,6 +16,7 @@ export default function Header() {
 
   const navLinks = [
     { href: '#summary', label: t.nav.summary },
+    { href: '#achievements', label: t.nav.achievements },
     { href: '#experience', label: t.nav.experience },
     { href: '#projects', label: t.nav.projects },
     { href: '#stack', label: t.nav.stack },

@@ -14,9 +14,9 @@ export default function Footer() {
           <div className="space-y-3">
             <span className="text-2xl font-extrabold gradient-text">MA</span>
             <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
-              Head Frontend · Team Lead Web & Mobile
+              {t.footer.tagline}
               <br />
-              Buenos Aires, Argentina
+              {t.footer.location}
             </p>
           </div>
 

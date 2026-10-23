@@ -5,12 +5,12 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Maximiliano Albeldas — Head Frontend',
+  title: 'Maximiliano Albeldas — Head Frontend & Mobile',
   description:
-    'Head Frontend y Technical Lead especializado en Web y Mobile. Buenos Aires, Argentina.',
+    'Head Frontend & Mobile: liderazgo técnico de equipos Web y Mobile, apps nativas Android e iOS, pagos móviles y CI/CD. Buenos Aires, Argentina.',
   openGraph: {
-    title: 'Maximiliano Albeldas — Head Frontend',
-    description: 'Head Frontend y Technical Lead especializado en Web y Mobile.',
+    title: 'Maximiliano Albeldas — Head Frontend & Mobile',
+    description: 'Liderazgo técnico de equipos Web y Mobile · React · React Native · Kotlin · Swift.',
     type: 'website',
   },
 }
