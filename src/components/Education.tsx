@@ -25,15 +25,20 @@ export default function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.45 }}
-            className="glass rounded-2xl p-6 flex items-center gap-5"
+            className="glass rounded-2xl p-6 flex flex-col gap-5"
           >
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/20 to-violet-500/20 border border-indigo-500/20 flex items-center justify-center shrink-0">
-              <GradCapIcon />
-            </div>
-            <div>
-              <p className="text-white font-semibold text-sm">{t.education.institution}</p>
-              <p className="text-slate-400 text-sm mt-0.5">{t.education.degree}</p>
-            </div>
+            {t.education.courses.map((course) => (
+              <div key={course.institution} className="flex items-center gap-5">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/20 to-violet-500/20 border border-indigo-500/20 flex items-center justify-center shrink-0">
+                  <GradCapIcon />
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-sm">{course.institution}</p>
+                  <p className="text-slate-400 text-sm mt-0.5">{course.degree}</p>
+                </div>
+              </div>
+            ))}
+            <p className="text-xs text-slate-500 leading-relaxed">{t.education.previous}</p>
           </motion.div>
 
           {/* Languages */}

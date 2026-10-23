@@ -25,6 +25,12 @@ const TAG_COLORS: Record<string, string> = {
   Methodology: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20',
   Documentación: 'bg-teal-500/10 text-teal-400 border-teal-500/20',
   Documentation: 'bg-teal-500/10 text-teal-400 border-teal-500/20',
+  Kotlin: 'bg-violet-500/10 text-violet-400 border-violet-500/20',
+  'Jetpack Compose': 'bg-green-500/10 text-green-400 border-green-500/20',
+  Swift: 'bg-orange-500/10 text-orange-400 border-orange-500/20',
+  Pagos: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+  Payments: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+  'CI/CD': 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
 }
 
 function Tag({ label }: { label: string }) {
@@ -54,7 +60,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Regular projects grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
+        <div className="grid sm:grid-cols-2 gap-5 mb-5">
           {regular.map((project, i) => (
             <motion.div
               key={project.name}
@@ -112,7 +118,7 @@ export default function Projects() {
                     <div className="flex items-center gap-3 mb-1">
                       <h3 className="text-lg font-bold text-white">{featured.name}</h3>
                       <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-gradient-to-r from-violet-500/20 to-cyan-500/20 text-cyan-300 border border-cyan-500/20 uppercase tracking-wider">
-                        Featured
+                        {t.projects.featuredLabel}
                       </span>
                     </div>
                     <p className="text-xs text-slate-500">{featured.subtitle}</p>
